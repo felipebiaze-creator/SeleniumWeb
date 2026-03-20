@@ -10,7 +10,7 @@ Funcionalidade: Cadastro de usuario
   @Cadastro1
   Cenario:Registrar novo usuario com sucesso
 
-   // Quando eu preencho o formulario
+    Quando eu preencho o formulario
     E clico em registrar
     Entao vejo a mensagem de cadastro realizado com sucesso
 
@@ -32,6 +32,14 @@ Funcionalidade: Cadastro de usuario
     E clico em registrar
     Entao vejo a mensagem de "O campo senha deve ter pelo menos 6 dígitos"
 
+  @Cadastro6
+  Cenario:Registrar novo usuario senha invalida
+    Quando eu preencho o formulario nome "Felipe" e email "felipebiaze@gmail.com.br" e senha "123"
+    E clico em registrar
+    Entao vejo a mensagem de "O campo senha deve ter pelo menos 6 dígitos"
+
+
+
   @Cadastro5
   Esquema do Cenario: Validar <teste>
     Quando eu preencho o formulario nome "<user>" e email "<email>" e senha "<password>"
@@ -41,7 +49,7 @@ Funcionalidade: Cadastro de usuario
     Exemplos:
       | teste          | user   | email               | password  | message                                        |
       | Email invalido | Felipe | felipeteste         | 456789123 | O campo e-mail deve ser prenchido corretamente |
-      | Nome vazio     |        | felipe@teste.com.br | 456789123 | O campo nome deve ser prenchido                |
+      | Nome vazio     |        | felipe@teste.com.br | 456789123 | O campo nome deve ser prenchidos                |
       | Senha invalida | Felipe | felipe@teste.com.br | 456       | O campo senha deve ter pelo menos 6 dígitos    |
 
 
