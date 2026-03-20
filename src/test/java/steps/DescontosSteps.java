@@ -1,16 +1,9 @@
 package steps;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
-import org.apache.hc.client5.http.impl.routing.SystemDefaultRoutePlanner;
-import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import pages.HomePage;
 import runner.RunCucumberTest;
 

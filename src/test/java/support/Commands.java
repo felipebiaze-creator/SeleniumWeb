@@ -1,8 +1,5 @@
 package support;
 
-import net.bytebuddy.implementation.bind.MethodDelegationBinder;
-import org.apache.commons.lang3.SystemUtils;
-import org.apache.hc.client5.http.impl.routing.SystemDefaultRoutePlanner;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;

@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -18,6 +19,8 @@ public class RunBase {
     public static WebDriver driver;
 
     public static WebDriver getDriver(){
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("document.body.style.zoom = '75%';");
 
         return driver;
     }
@@ -32,13 +35,20 @@ public class RunBase {
              case "chrome":
                  driver = new ChromeDriver();
                  driver.manage().window().maximize();
+                 JavascriptExecutor js = (JavascriptExecutor) driver;
+                 js.executeScript("document.body.style.zoom = '50%';");
+
+                 break;
+
+             case "chrome-ci":
+                 ChromeOptions chromeOptions = new ChromeOptions();
+                 chromeOptions.addArguments("--headless=new");
+                 driver = new ChromeDriver(chromeOptions);
 
                  break;
              case "firefox":
                  driver = new FirefoxDriver();
                  driver.manage().window().maximize();
-
-
                  break;
 
              default:
