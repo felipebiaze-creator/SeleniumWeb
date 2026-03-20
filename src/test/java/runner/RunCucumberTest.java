@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"json:target/reports/cucumberTests.json", "html:target/reports/"},
         features = "src/test/resources/features",
-        tags = {"@Cadastro5"},//Colocar os cenarios que serão executados
+        //tags = {"@Cadastro1"},//Colocar os cenarios que serão executados
         glue = {"steps"}
 )
 public class RunCucumberTest extends RunBase {
