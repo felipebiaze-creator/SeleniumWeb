@@ -4,7 +4,9 @@ package pages;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import runner.RunCucumberTest;
 import support.Commands;
 
@@ -20,6 +22,7 @@ public class CadastroPage extends RunCucumberTest {
     private By btnCadastro = By.id("btnRegister");
     private By mensagemErro = By.className("errorLabel");
     private By mensagemSucesso = By.id("swal2-title");
+    private By formulario = By.cssSelector("#login_area > div > div > div > div > h3");
 
 
 
@@ -32,7 +35,9 @@ public class CadastroPage extends RunCucumberTest {
 
         //getDriver(System.getProperty("browser")).get(URL);
 
+
         getDriver("chrome").get(URL);
+
 
         //Commands.waitElementBeClickable(btnAcessoCadastro, 20);
 
@@ -68,13 +73,15 @@ public class CadastroPage extends RunCucumberTest {
     public void clicarCadastrar() {
 
         //getDriver().findElement(By.id("btnRegister")).click();
-        WebElement elemento = driver.findElement(By.id("btnRegister"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elemento);
-        // Agora você pode clicar ou interagir
-        //elemento.click();
+        //WebElement elemento = driver.findElement(By.id("btnRegister"));
+        //((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elemento);
+
 
         Commands.waitElementBeClickable(btnCadastro, 20);
         clickElement(btnCadastro);
+
+       // WebElement elemento1 = driver.findElement(By.cssSelector("#login_area > div > div > div > div > h3"));
+       // ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", elemento1);
 
     }
 

@@ -16,13 +16,13 @@ Funcionalidade: Cadastro de usuario
 
   @Cadastro2
   Cenario:Registrar novo usuario sem Email
-    Quando eu preencho o formulario nome "Felipe" e email "felipebiaze" e senha "123456789"
+    Quando eu preencho o formulario nome "Felipe" e email "felipebiaze" e senha "1234"
     E clico em registrar
     Entao vejo a mensagem de "O campo e-mail deve ser prenchido corretamente"
 
   @Cadastro3
   Cenario:Registrar novo usuario sem nome
-    Quando eu preencho o formulario nome "" e email "felipebiaze@teste.com.br" e senha "123456789"
+    Quando eu preencho o formulario nome "" e email "felipebiaze@teste.com.br" e senha "1234"
     E clico em registrar
     Entao vejo a mensagem de "O campo nome deve ser prenchido"
 

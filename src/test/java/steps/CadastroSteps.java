@@ -1,12 +1,17 @@
 package steps;
 
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
+import org.apache.maven.surefire.api.event.StandardStreamOutEvent;
 import pages.CadastroPage;
-import runner.RunBase;
 import runner.RunCucumberTest;
+import support.ScreenshotUtils;
 import support.Utils;
+
+import java.sql.SQLOutput;
 
 public class CadastroSteps extends RunCucumberTest {
 
@@ -52,5 +57,11 @@ public class CadastroSteps extends RunCucumberTest {
         cadastroPage.verificaCampoVazio(message);
 
     }
+
+    @After
+    public static void takeScreenshot(Scenario scenario){
+
+            ScreenshotUtils.addScreenshotOnScenario(scenario);
+        }
 
 }
