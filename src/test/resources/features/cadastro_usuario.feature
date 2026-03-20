@@ -10,7 +10,7 @@ Funcionalidade: Cadastro de usuario
   @Cadastro1
   Cenario:Registrar novo usuario com sucesso
 
-    Quando eu preencho o formulario
+   // Quando eu preencho o formulario
     E clico em registrar
     Entao vejo a mensagem de cadastro realizado com sucesso
 
