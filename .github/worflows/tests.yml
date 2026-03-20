@@ -10,7 +10,7 @@ jobs:
 
     Steps:
       - name: Clonar o projeto
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
         #instalar o java
       - name: Instalar java 11
@@ -26,7 +26,7 @@ jobs:
 
 # instalar o chromedriver
       - name: Instalar o Chrome Driver
-      - uses: nanasess/setup-chromedriver@v2
+        uses: nanasess/setup-chromedriver@v1
 
       - name: Start ChromeDriver
         run: |
