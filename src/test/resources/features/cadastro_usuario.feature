@@ -49,7 +49,7 @@ Funcionalidade: Cadastro de usuario
     Exemplos:
       | teste          | user   | email               | password  | message                                        |
       | Email invalido | Felipe | felipeteste         | 456789123 | O campo e-mail deve ser prenchido corretamente |
-      | Nome vazio     |        | felipe@teste.com.br | 456789123 | O campo nome deve ser prenchidos                |
+      | Nome vazio     |        | felipe@teste.com.br | 456789123 | O campo nome deve ser prenchido                |
       | Senha invalida | Felipe | felipe@teste.com.br | 456       | O campo senha deve ter pelo menos 6 dígitos    |
 
 
